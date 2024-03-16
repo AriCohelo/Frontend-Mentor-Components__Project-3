@@ -1,0 +1,64 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+
+body {
+	@include flexCenter();
+	@include resets();
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background-color: $color-Off-Black;
+	font-family: 'Inter', sans-serif;
+	color: $color-White;
+}
+
+.card {
+	@include flexCenter();
+	flex-direction: column;
+	height: auto;
+	width: auto;
+	padding: 30px;
+	background-color: $color-Dark-Grey;
+	border-radius: 15px;
+	&__image {
+		width: 30%;
+		padding: 10px;
+		img {
+			border-radius: 50%;
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+	&__name {
+		margin-top: 10px;
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+	&__adress {
+		color: $color-Green;
+		font-size: 0.75rem;
+		padding: 5px;
+	}
+	&__profession {
+		font-size: 0.75rem;
+		color: $color-White;
+		padding: 20px;
+	}
+	&__social-net {
+		@include flexCenter();
+		font-size: 0.75rem;
+		font-weight: 600;
+		border-radius: 5px;
+		width: 270px;
+		height: 30px;
+		background-color: $color-Grey;
+		padding: 5px;
+		margin: 8px;
+	}
+	&__social-net--active:hover {
+		cursor: pointer;
+		color: $color-Dark-Grey;
+		background-color: $color-Green;
+	}
+}
